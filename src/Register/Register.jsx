@@ -1,3 +1,4 @@
+import { getAuth, updateProfile } from '@firebase/auth'
 import React, { useState } from 'react'
 import { useAuth } from '../Context/AuthContext'
 import useMounted from '../Hooks/useMounted'
@@ -23,7 +24,19 @@ function Register() {
                 }else{
                     setIsSubmitting(true)
                     register(email, password, name).then((response) => {
-                        console.log(response)}).catch((error)=>{console.log(error.message)})
+                        console.log("ini"+response)
+                        const auth = getAuth();
+                        const user = auth.currentUser;
+                        updateProfile(user, {
+                            displayName : name
+                        }).then(() => {
+                            console.log("updated")
+                          }).catch((error) => {
+                            // An error occurred
+                            // ...
+                          });
+
+                    }).catch((error)=>{console.log(error.message)})
                         .finally(()=> mounted.current && setIsSubmitting(false))
                 }
             }}>
