@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useHistory } from 'react-router'
 import { useAuth } from '../Context/AuthContext'
+import useMounted from '../Hooks/useMounted'
 import './Login.css'
 
 function Login() {
@@ -11,8 +12,11 @@ function Login() {
     
     const { login, signInWithGoogle } = useAuth()
     const history = useHistory()
+
+    const mounted  = useMounted()
     
     return (
+        
         <div>
             <h1>Login</h1>
             <button onClick={()=>{
@@ -32,7 +36,7 @@ function Login() {
                         console.log(response)
                         history.push('/')
                     }).catch((error)=>{console.log(error.message)})
-                        .finally(()=> setIsSubmitting(false))
+                        .finally(()=> mounted.current && setIsSubmitting(false))
                 }
             }}>
 

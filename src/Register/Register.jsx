@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useAuth } from '../Context/AuthContext'
+import useMounted from '../Hooks/useMounted'
 import './Register.css'
 
 function Register() {
@@ -9,6 +10,7 @@ function Register() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     
     const { register } = useAuth()
+    const mounted = useMounted()
     return (
         <div>
             <h1>Register</h1>
@@ -22,7 +24,7 @@ function Register() {
                     setIsSubmitting(true)
                     register(email, password, name).then((response) => {
                         console.log(response)}).catch((error)=>{console.log(error.message)})
-                        .finally(()=> setIsSubmitting(false))
+                        .finally(()=> mounted.current && setIsSubmitting(false))
                 }
             }}>
                 <input type="text" placeholder="name" name="name" id="" value={name} onChange={(e)=>setName(e.target.value)} />
