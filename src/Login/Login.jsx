@@ -46,6 +46,7 @@ function Login() {
                 {isSubmitting ? <button type="submit" disabled>Loading</button> :<button type="submit">Sign In</button> }
 
                 <a href="/register">Sign up</a>
+                <a href="/forgotpassword">Forgot your password?</a>
             </form>
 
         </div>

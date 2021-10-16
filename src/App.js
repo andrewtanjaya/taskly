@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch , Redirect, useLocation} from 'react-route
 import Register from './Register/Register';
 import AuthContextProvider, { useAuth } from './Context/AuthContext';
 import Home from './Home/Home';
+import ForgotPassword from './ForgotPassword/ForgotPassword';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         <ProtectedRoute exact path="/register">
           <Register/>
         </ProtectedRoute>
+        <ProtectedRoute exact path="/forgotpassword">
+          <ForgotPassword/>
+        </ProtectedRoute>
       </Switch>
       
       </BrowserRouter>
@@ -34,7 +38,7 @@ function ProtectedRoute(props){
   const location = useLocation()
   const {path} = props
 
-  if(path === '/login' || path === '/register'){
+  if(path === '/login' || path === '/register' || path === '/forgotpassword'){
     return currentUser ? <Redirect to={location.state?.from ?? '/'} /> : <Route {...props}/>
   }
 
