@@ -2,6 +2,9 @@ import { getAuth, updateProfile } from '@firebase/auth'
 import React, { useState } from 'react'
 import { useAuth } from '../Context/AuthContext'
 import useMounted from '../Hooks/useMounted'
+import logo from '../Assets/taskly-logo.png'
+import google from '../Assets/google-logo.png'
+import hand from '../Assets/hand.png'
 import './Register.css'
 
 function Register() {
@@ -10,12 +13,39 @@ function Register() {
     const [name, setName] = useState("")
     const [isSubmitting, setIsSubmitting] = useState(false)
     
-    const { register } = useAuth()
+    const { register, signInWithGoogle } = useAuth()
     const mounted = useMounted()
     return (
-        <div>
-            <h1>Register</h1>
-            <form onSubmit={async e=>{
+            <div className="signInContainer">
+            <div className="leftContentSignIn">
+                <img src={hand} alt="" />
+                <div className="titleDesc">
+                    <p className="titleSlider"><b>Keep task in one place</b></p>
+                    <p className="descSlider">Save time, avoid losing work and
+                    information, delegate, and track tasks
+                    to stay on schedule and hit deadlines.</p>
+                </div>
+            </div>
+            <div className="rightContentSignUp">
+            <div className="logoContainerSignIn">
+                <img src={logo} alt="logo" />
+                <p><b>task.ly</b></p>
+            </div>
+            <h1>Sign Up</h1>
+            <p className="afterSignInText">Start manage your work now!</p>
+
+            <button className="googleSignUpButton" onClick={()=>{
+                signInWithGoogle()
+                .then(user=>console.log(user))
+                .catch(error => console.log(error.message))}
+                }>
+                    <img src={google} alt="" />
+                    Sign up with google</button>
+
+            <div className="lineWithTextUp">
+            <hr></hr><p className="afterButtonText">or Sign up with Email</p><hr></hr>
+            </div>
+            <form className="signInForm" onSubmit={async e=>{
                 e.preventDefault()
                 console.log("a")
                 if(!email || !password || !name){
@@ -40,15 +70,29 @@ function Register() {
                         .finally(()=> mounted.current && setIsSubmitting(false))
                 }
             }}>
-                <input type="text" placeholder="name" name="name" id="" value={name} onChange={(e)=>setName(e.target.value)} />
-                <input placeholder="email" type="email" name="email" id="" value={email} onChange={(e)=>setEmail(e.target.value)} />
-                <input placeholder="password" type="password" name="password" id="" value={password} onChange={(e)=>setPassword(e.target.value)} />
-                {isSubmitting ? <button type="submit" disabled>Loading</button> :<button type="submit">Sign Up</button> }
+                <label>Name</label>
+                <input type="text" placeholder="Name" name="name" id="" value={name} onChange={(e)=>setName(e.target.value)} />
+                <label>Email</label>
+                <input placeholder="abc@gmail.com" type="email" name="email" id="" value={email} onChange={(e)=>setEmail(e.target.value)} />
+                <label>Password</label>
+                <input placeholder="Min.6 characters" type="password" name="password" id="" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                <div className="check">
+                    <input type="checkbox" name="terms" id="" /> 
+                    <label>I agree to the Terms & Condition</label>
+                </div>
+                {isSubmitting ? <button type="submit" disabled><b>Loading...</b></button> :<button type="submit"><b>Sign Up</b></button> }
+                <div className="registerLinkText">
+                    <p>Already have account? </p>
+                    <a href="/login">Sign in</a>
+                </div>
 
-                <a href="/login">Sign in</a>
+                <p className="copyRight">©2021 Andrew Wiseson Tanjaya all right reserved</p>
             </form>
-
+            </div>
+            
         </div>
+
+        
     )
 }
 
