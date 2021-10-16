@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { useHistory } from 'react-router'
+import { useHistory, useLocation } from 'react-router'
 import { useAuth } from '../Context/AuthContext'
 import useMounted from '../Hooks/useMounted'
 import './Login.css'
@@ -12,6 +12,7 @@ function Login() {
     
     const { login, signInWithGoogle } = useAuth()
     const history = useHistory()
+    const location = useLocation()
 
     const mounted  = useMounted()
     
@@ -34,7 +35,7 @@ function Login() {
                     setIsSubmitting(true)
                     login(email, password).then((response) => {
                         console.log(response)
-                        history.push('/')
+                        history.push(location.state?.from ?? '/')
                     }).catch((error)=>{console.log(error.message)})
                         .finally(()=> mounted.current && setIsSubmitting(false))
                 }
