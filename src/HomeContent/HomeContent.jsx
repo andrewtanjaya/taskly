@@ -5,6 +5,7 @@ import { useAuth } from '../Context/AuthContext'
 import Search from '../Search/Search'
 import {MdAdd} from 'react-icons/md'
 import './HomeContent.css'
+import TaskCard from '../TaskCard/TaskCard'
 
 function HomeContent() {
 
@@ -41,9 +42,22 @@ function HomeContent() {
                 </div>
             </div>
 
-            <div className="divider1">
+            <div className="divider2">
                 <p>Morning Meeting</p>
                 <hr></hr>
+                <div className="ongoing activeStatus">
+                    <p>Ongoing</p>
+                </div>
+                <div className="incoming">
+                    <p>Incoming</p>
+                </div>
+            </div>
+
+            <div className="taskCardList">
+                <TaskCard icon="🛌" title="Wake up!" date="Sat 3 April 2021" time="06.30 am - 07.00 am" />
+                <TaskCard icon="🚿" title="Take Shower" date="Sat 3 April 2021" time="06.40 am - 07.20 am" />
+                <TaskCard icon="💻" title="Prepare Client Presentation" date="Sat 3 April 2021" time="06.50 am - 03.00 pm" />
+                <TaskCard icon="💻" title="Prepare Client Presentation" date="Sat 3 April 2021" time="06.50 am - 03.00 pm" />
             </div>
         </div>
     )
