@@ -1,0 +1,43 @@
+
+.detailAccordionContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    height: 60px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 1px 2px 25px -10px rgba(7,30,241,0.20);
+    -webkit-box-shadow: 1px 2px 25px -10px rgba(7,30,241,0.20);
+    -moz-box-shadow:1px 2px 25px -10px rgba(7,30,241,0.20);
+    margin-top: 14px;
+}
+
+.iconDetailTask{
+    width: 8%;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-right: 1px solid #E5E5E5;
+    height: 60px;
+    margin-right: 30px;
+    padding-right: 14px;
+    // background-color: green;
+}
+.taskDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;   
+    p{
+        margin: 0;
+    }
+    p:nth-child(2){
+        color: #A3A3A3;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import AccordionTask from '../AccordionTask/AccordionTask'
 import { useAuth } from '../Context/AuthContext'
 import Search from '../Search/Search'
 import './HomeContent.css'
@@ -18,6 +19,8 @@ function HomeContent() {
                 <p>Today</p>
                 <hr></hr>
             </div>
+
+            <AccordionTask/>
         </div>
     )
 }
