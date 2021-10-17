@@ -14,4 +14,11 @@
   width: 60%;
   margin-top: 40px;
 }
+
+.miniMenu {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  font-size: 24px;
+}
 /*# sourceMappingURL=Home.css.map */

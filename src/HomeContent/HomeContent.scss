@@ -26,6 +26,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    p{
+        white-space: nowrap;
+    }
     hr{
         margin-left: 10px;
         border: none;
@@ -33,4 +36,22 @@
         height: 1px;
         background: linear-gradient(to left, #b700f958, #071EF1);
     }
+}
+
+.categoryList{
+    display: flex;
+    flex-direction: row;
+}
+
+.addCategoryContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    background-color: white;
+    border-radius: 30px;
+    color: #071EF1;
+    font-size: 40px;
+    box-shadow: 0 8px 25px -5px #0c23f533;
 }

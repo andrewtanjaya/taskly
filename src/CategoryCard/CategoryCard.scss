@@ -1,0 +1,44 @@
+.categoryContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    width: 27%;
+    height: 90px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    box-shadow: 0 8px 25px -5px #0c23f533;
+}
+
+.categoryActive{
+    background-image: linear-gradient(235deg, #FF5AEF, #0c23f5b1);
+    box-shadow: 0 8px 25px -5px #ff5aef90;
+    color: white;
+}
+
+.iconCategory{
+    font-size: 50px;
+    margin: 0;
+    padding: 0px 0px ;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.categoryDetail{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    p  {
+        margin: 0;
+    }
+    p:nth-child(2){
+        font-size: 12px;
+    }
+}
+

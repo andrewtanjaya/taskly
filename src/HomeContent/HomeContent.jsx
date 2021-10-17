@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AccordionTask from '../AccordionTask/AccordionTask'
+import CategoryCard from '../CategoryCard/CategoryCard'
 import { useAuth } from '../Context/AuthContext'
 import Search from '../Search/Search'
+import {MdAdd} from 'react-icons/md'
 import './HomeContent.css'
 
 function HomeContent() {
+
     const {currentUser } = useAuth()
     return (
         <div>
@@ -25,6 +28,21 @@ function HomeContent() {
 
             <div className="divider1">
                 <p>Category</p>
+                <hr></hr>
+            </div>
+
+            <div className="categoryList">
+                <CategoryCard title="Morning Meeting" icon="🌤" isActive="true"/>
+                <CategoryCard title="Workout Routine" icon="💪" isActive="false"/>
+                <CategoryCard title="Birthday Party!" icon="🎉" isActive="false" />
+
+                <div className="addCategoryContainer">
+                    <MdAdd/>
+                </div>
+            </div>
+
+            <div className="divider1">
+                <p>Morning Meeting</p>
                 <hr></hr>
             </div>
         </div>
