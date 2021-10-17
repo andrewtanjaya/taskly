@@ -5,7 +5,7 @@ import {createUserWithEmailAndPassword ,
     onAuthStateChanged,
     signOut,
     GoogleAuthProvider,
-    signInWithPopup,
+    signInWithRedirect,
     sendPasswordResetEmail} from 'firebase/auth'
 
 const AuthContext = createContext({
@@ -45,7 +45,7 @@ export default function AuthContextProvider({children}){
 
     function signInWithGoogle(){
         const provider= new GoogleAuthProvider()
-        return signInWithPopup(auth, provider)
+        return signInWithRedirect(auth, provider)
     }
 
     function forgotpassword(email){
