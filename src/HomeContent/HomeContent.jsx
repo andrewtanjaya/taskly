@@ -20,7 +20,13 @@ function HomeContent() {
                 <hr></hr>
             </div>
 
-            <AccordionTask/>
+            <AccordionTask title="Morning Meeting" icon="🌤"/>
+            <AccordionTask title="Birthday Party!" icon="🎉"/>
+
+            <div className="divider1">
+                <p>Category</p>
+                <hr></hr>
+            </div>
         </div>
     )
 }

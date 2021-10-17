@@ -2,17 +2,17 @@ import React from 'react'
 import './DetailAccordion.css'
 import {IoIosCheckmarkCircle} from 'react-icons/io'
 
-function DetailAccordion() {
+function DetailAccordion(props) {
     return (
         <div className="detailAccordionContainer">
             <div className="iconDetailTask">
-                    <p>🛌</p>
+                    <p>{props.icon}</p>
                 </div>
                 
                 <div className="accTaskTitle">
                     <div className="taskDetail">
-                        <p>Wake Up!</p>
-                        <p>06.30 am - 07.00 am</p>
+                        <p>{props.title}</p>
+                        <p>{props.time}</p>
                     </div>
                     
                     <div className="rightAccordion">
