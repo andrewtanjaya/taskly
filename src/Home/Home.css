@@ -12,6 +12,11 @@
   padding-bottom: 200px;
 }
 
+.homeBg button {
+  position: fixed;
+  bottom: 20px;
+}
+
 .homeContainer {
   width: 60%;
   margin-top: 40px;
