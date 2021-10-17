@@ -10,7 +10,7 @@ function Home() {
     return (
         <div className="homeBg">
             <div className="miniMenu">
-            <RiMenu2Fill/>
+                <RiMenu2Fill/>
             </div>
             
             <div className="homeContainer">
