@@ -9,6 +9,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 200px;
 }
 
 .homeContainer {
@@ -19,6 +20,7 @@
 .miniMenu {
   position: fixed;
   width: 100vw;
+  z-index: 3;
   background-color: white;
   height: 60px;
   display: -webkit-box;
@@ -37,5 +39,11 @@
   backdrop-filter: blur(1.4px);
   -webkit-backdrop-filter: blur(3.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media only screen and (max-width: 760px) {
+  .homeContainer {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=Home.css.map */

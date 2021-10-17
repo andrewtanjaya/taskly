@@ -5,6 +5,7 @@
     width: 100vw;
     display: flex;
     justify-content: center;
+    padding-bottom: 200px;
 
 }
 
@@ -16,6 +17,7 @@
 .miniMenu{
     position: fixed;
     width: 100vw;
+    z-index: 3;
     background-color: white;
     height: 60px;
     display: flex;
@@ -31,3 +33,9 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+
+@media only screen and (max-width: 760px) {
+    .homeContainer{
+        width: 80%;
+    }
+}

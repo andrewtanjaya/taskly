@@ -1,6 +1,6 @@
 import React from 'react'
 import './TaskCard.css'
-import {TiDelete, TiEdit} from 'react-icons/ti'
+import {TiDelete} from 'react-icons/ti'
 import {MdModeEditOutline} from 'react-icons/md'
 
 function TaskCard(props) {

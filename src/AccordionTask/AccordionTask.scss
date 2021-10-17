@@ -25,7 +25,6 @@
     flex-direction: column;
     align-items: center;
     max-height: 50px;
-    height: 50px;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 }
@@ -38,7 +37,6 @@
 
 .show{
     padding-bottom: 20px;
-    height: auto;
     max-height: 99999px;
     transition: all 0.5s ease-in-out;
 }

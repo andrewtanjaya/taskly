@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useHistory, useLocation } from 'react-router'
 import { useAuth } from '../Context/AuthContext'
 import useMounted from '../Hooks/useMounted'
 import './ForgotPassword.css'
@@ -9,8 +8,6 @@ function ForgotPassword() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     
     const { forgotpassword } = useAuth()
-    const history = useHistory()
-    const location = useLocation()
 
     const mounted  = useMounted()
     return (
