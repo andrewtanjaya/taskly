@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
+    justify-content: center;
 }
 
 .leftContentSignIn{
@@ -22,6 +23,7 @@
 }
 
 .rightContentSignIn{
+    background-color: white;
     overflow: auto;
     padding: 100px 15% 0px 15%;
     box-sizing: border-box;
@@ -74,6 +76,8 @@
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     display: flex;
+    justify-content: center;
+    width: 95%;
     img{
         width: 20px;
         height: 20px;
@@ -97,7 +101,7 @@
     font-size: 12px;
     padding: 0 10px;
     color: #7A7A7A;
-    width: 120%;
+    width: 150%;
 }
 
 .signInForm{
@@ -164,3 +168,42 @@
     margin-right: 5%;
     margin-top: 10%;
 }
+
+@media only screen and (max-width: 1365px) {
+    .googleSignInButton{
+        padding: 12px 70px;
+    }
+    .signInContainer{
+        background-image: linear-gradient(225deg, #FF5AEF, #0c23f5b1);
+    }
+    .leftContentSignIn{
+        display: none;
+    }
+    .rightContentSignIn{
+        margin: auto auto;
+        border-radius: 20px;
+        transform: scale(0.7);
+        width: 600px;
+        height: auto;
+        padding: 100px 100px;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .signInContainer{
+        background-color: white;
+    }
+    .rightContentSignIn{
+        border-radius: 0px;
+        position: absolute;
+        top : -40px;
+        left: 0px;
+        transform: scale(0.6);
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+   
+  }
+

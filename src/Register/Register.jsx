@@ -2,9 +2,9 @@ import { getAuth, updateProfile } from '@firebase/auth'
 import React, { useState } from 'react'
 import { useAuth } from '../Context/AuthContext'
 import useMounted from '../Hooks/useMounted'
-import logo from '../Assets/taskly-logo.png'
+import clock from '../Assets/clock.png'
 import google from '../Assets/google-logo.png'
-import hand from '../Assets/hand.png'
+import logo from '../Assets/taskly-logo.png'
 import './Register.css'
 
 function Register() {
@@ -17,13 +17,13 @@ function Register() {
     const mounted = useMounted()
     return (
             <div className="signInContainer">
-            <div className="leftContentSignIn">
-                <img src={hand} alt="" />
+            <div className="leftContentSignUp">
+                <img src={clock} alt="" />
                 <div className="titleDesc">
-                    <p className="titleSlider"><b>Keep task in one place</b></p>
-                    <p className="descSlider">Save time, avoid losing work and
-                    information, delegate, and track tasks
-                    to stay on schedule and hit deadlines.</p>
+                    <p className="titleSlider"><b>Prioritize your work</b></p>
+                    <p className="descSlider">Tracking tasks allows everyone to 
+                    understand which are more important 
+                    or require more time</p>
                 </div>
             </div>
             <div className="rightContentSignUp">

@@ -17,6 +17,9 @@
 
 .check input {
   width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .googleSignUpButton {
@@ -32,6 +35,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 95%;
 }
 
 .googleSignUpButton img {
@@ -64,11 +68,70 @@
 }
 
 .rightContentSignUp {
+  background-color: white;
   overflow: auto;
-  padding: 80px 15% 0px 15%;
+  padding: 60px 15% 0px 15%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 56vw;
   height: 100vh;
+}
+
+.leftContentSignUp {
+  width: 46vw;
+  position: relative;
+  background-image: linear-gradient(225deg, #FF5AEF, #0c23f5b1);
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftContentSignUp img {
+  position: absolute;
+  top: 40%;
+  min-width: 60%;
+  max-width: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1365px) {
+  .leftContentSignUp {
+    display: none;
+  }
+  .rightContentSignUp {
+    margin: auto auto;
+    border-radius: 20px;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    width: 600px;
+    height: auto;
+    padding: 40px 100px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .signInContainer {
+    background-color: white !important;
+    background-image: none;
+  }
+  .rightContentSignUp {
+    position: absolute;
+    top: -60px;
+    left: 0px;
+    border-radius: 0px;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
 }
 /*# sourceMappingURL=Register.css.map */
