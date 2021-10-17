@@ -15,6 +15,9 @@
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 14px;
   border-radius: 14px;
   background: white;
@@ -55,9 +58,9 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .taskDetail p {
@@ -66,5 +69,20 @@
 
 .taskDetail p:nth-child(2) {
   color: #A3A3A3;
+}
+
+@media only screen and (max-width: 760px) {
+  .taskDetail p {
+    font-size: 10px;
+    word-wrap: break-word;
+  }
+  .detailAccordionContainer {
+    height: 100px;
+  }
+  .iconDetailTask {
+    font-size: 16px;
+    height: 100px;
+    margin-right: 10px;
+  }
 }
 /*# sourceMappingURL=DetailAccordion.css.map */

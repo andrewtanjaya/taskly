@@ -81,7 +81,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .divider2 p {
@@ -133,6 +133,16 @@
   color: #071EF1;
 }
 
+.divider2 .statusAction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .categoryList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +151,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  overflow-x: scroll;
+  padding: 30px 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .addCategoryContainer {
@@ -157,7 +172,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 10%;
+  min-width: 90px;
+  max-width: 90px;
   background-color: white;
   border-radius: 30px;
   color: #071EF1;
@@ -167,6 +183,7 @@
 }
 
 .taskCardList {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,5 +199,47 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 760px) {
+  .categoryList {
+    padding: 5px 0px;
+    margin: 0;
+  }
+  .greetMessage h2 {
+    font-size: 16px;
+  }
+  .greetMessage p {
+    font-size: 12px;
+  }
+  .addCategoryContainer {
+    height: 70px;
+    min-width: 70px;
+    max-width: 70px;
+  }
+  .divider2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .divider2 hr {
+    display: none;
+  }
+  .divider2 .statusAction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .header {
+    margin-top: 40px;
+  }
 }
 /*# sourceMappingURL=HomeContent.css.map */

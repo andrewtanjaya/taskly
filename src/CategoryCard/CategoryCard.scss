@@ -5,7 +5,8 @@
     color: black;
     align-items: center;
     justify-content: center;
-    width: 27%;
+    min-width: 240px;
+    max-width: 240px;
     height: 90px;
     border-radius: 30px;
     box-sizing: border-box;
@@ -42,3 +43,10 @@
     }
 }
 
+@media only screen and (max-width: 760px) {
+    .categoryContainer{
+        transform: scale(0.8);
+        margin-left: 0px;
+        margin: 0;
+    }
+}

@@ -36,7 +36,6 @@ function HomeContent() {
                 <CategoryCard title="Morning Meeting" icon="🌤" isActive="true"/>
                 <CategoryCard title="Workout Routine" icon="💪" isActive="false"/>
                 <CategoryCard title="Birthday Party!" icon="🎉" isActive="false" />
-
                 <div className="addCategoryContainer">
                     <MdAdd/>
                 </div>
@@ -45,11 +44,13 @@ function HomeContent() {
             <div className="divider2">
                 <p>Morning Meeting</p>
                 <hr></hr>
+                <div className="statusAction">
                 <div className="ongoing activeStatus">
                     <p>Ongoing</p>
                 </div>
                 <div className="incoming">
                     <p>Incoming</p>
+                </div>
                 </div>
             </div>
 

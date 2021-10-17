@@ -45,7 +45,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     p{
         white-space: nowrap;
     }
@@ -86,6 +86,10 @@
         }
         border: none;
     }
+    .statusAction{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 
@@ -93,6 +97,9 @@
 .categoryList{
     display: flex;
     flex-direction: row;
+    overflow-x : scroll;
+    padding:30px 14px;
+    align-items: center;
 }
 
 .addCategoryContainer{
@@ -100,7 +107,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    min-width: 90px;
+    max-width: 90px;
     background-color: white;
     border-radius: 30px;
     color: #071EF1;
@@ -109,9 +117,45 @@
 }
 
 .taskCardList{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 760px) {
+    .categoryList{
+        padding: 5px 0px;
+        margin: 0;
+    }
+    .greetMessage{
+        h2{
+            font-size: 16px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    .addCategoryContainer{
+        height: 70px;
+        min-width: 70px;
+        max-width: 70px;
+    }
+
+    .divider2{
+        display: flex;
+        flex-direction: column;
+        hr{
+            display: none;
+        }
+        .statusAction{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .header{
+        margin-top: 40px
+    }
 }

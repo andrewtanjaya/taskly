@@ -1,6 +1,7 @@
 .taskCardContainer {
   background-color: white;
-  width: 32%;
+  max-width: 260px;
+  min-width: 260px;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,9 +20,12 @@
   -webkit-box-shadow: 0 8px 25px -5px #0c23f533;
           box-shadow: 0 8px 25px -5px #0c23f533;
   margin-top: 14px;
+  padding: 0 6px;
 }
 
 .actionButton {
+  width: 20%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,12 +44,24 @@
 .iconTaskCard {
   font-size: 40px;
   padding: 0px 10px;
-}
-
-.taskCardDetail {
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.taskCardDetail {
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -82,5 +98,28 @@
           align-items: center;
   background-color: blue;
   border-radius: 40px;
+}
+
+@media only screen and (max-width: 1360px) {
+  .taskCardContainer {
+    min-width: 380px;
+    max-width: 380px;
+  }
+}
+
+@media only screen and (max-width: 1315px) {
+  .taskCardContainer {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .taskCardDetail {
+    font-size: 12px;
+  }
+  .iconTaskCard {
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=TaskCard.css.map */
