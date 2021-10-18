@@ -6,6 +6,7 @@ import Register from './Register/Register';
 import AuthContextProvider, { useAuth } from './Context/AuthContext';
 import Home from './Home/Home';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
+import AddTask from './AddTask/AddTask';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute exact path="/forgotpassword">
           <ForgotPassword/>
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/addTask">
+          <AddTask/>
         </ProtectedRoute>
       </Switch>
       

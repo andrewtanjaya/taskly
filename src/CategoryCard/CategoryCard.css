@@ -23,6 +23,7 @@
   margin-right: 20px;
   -webkit-box-shadow: 0 8px 25px -5px #0c23f533;
           box-shadow: 0 8px 25px -5px #0c23f533;
+  cursor: pointer;
 }
 
 .categoryActive {

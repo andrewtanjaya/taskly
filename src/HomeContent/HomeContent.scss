@@ -108,7 +108,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-width: 100px;
+    min-width: 90px;
     max-width: 90px;
     height: 90px;
     background-color: white;
@@ -116,6 +116,7 @@
     color: #071EF1;
     font-size: 40px;
     box-shadow: 0 8px 25px -5px #0c23f533;
+    cursor: pointer;
 }
 
 .taskCardList{

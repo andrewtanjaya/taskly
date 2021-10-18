@@ -48,8 +48,10 @@
 
 .floatingButtonContainer {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .addTaskFloatingButton {
@@ -82,8 +84,8 @@
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 140%;
-  right: -18px;
+  bottom: 130%;
+  right: -10px;
   margin-left: -60px;
   -webkit-animation: tooltipAnimation 4s infinite;
           animation: tooltipAnimation 4s infinite;
@@ -101,6 +103,18 @@
   border-color: black transparent transparent transparent;
 }
 
+.floatingButtonContainer:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.floatingButtonContainer:hover .addTaskFloatingButton {
+  -webkit-box-shadow: 0 8px 30px 0px #72727237;
+          box-shadow: 0 8px 30px 0px #72727237;
+}
+
 @media only screen and (max-width: 760px) {
   .homeContainer {
     width: 80%;
@@ -109,25 +123,25 @@
 
 @-webkit-keyframes tooltipAnimation {
   0% {
-    bottom: 140%;
-  }
-  50% {
     bottom: 120%;
   }
+  50% {
+    bottom: 100%;
+  }
   100% {
-    bottom: 140%;
+    bottom: 120%;
   }
 }
 
 @keyframes tooltipAnimation {
   0% {
-    bottom: 140%;
-  }
-  50% {
     bottom: 120%;
   }
+  50% {
+    bottom: 100%;
+  }
   100% {
-    bottom: 140%;
+    bottom: 120%;
   }
 }
 /*# sourceMappingURL=Home.css.map */

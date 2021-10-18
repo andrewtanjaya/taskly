@@ -4,6 +4,7 @@ import {RiMenu2Fill} from 'react-icons/ri'
 import './Home.css'
 import { useAuth } from '../Context/AuthContext'
 import { MdAdd } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 
 
@@ -19,11 +20,14 @@ function Home() {
                 <HomeContent/>
             </div>
             
-            <div className="floatingButtonContainer">
-                <span class="tooltiptext">Add Morning Meeting Task Here</span>
+            <div className="floatingButtonContainer" >
+                <span className="tooltiptext">Add Morning Meeting Task Here</span>
+                <Link to="/addTask?cat=morning meeting">
                 <div className="addTaskFloatingButton">
                     <MdAdd/>
                 </div>
+                </Link>
+                
             </div>
 
             
