@@ -2,18 +2,20 @@ import React from 'react'
 import HomeContent from '../HomeContent/HomeContent'
 import {RiMenu2Fill} from 'react-icons/ri'
 import './Home.css'
-import { useAuth } from '../Context/AuthContext'
 import { MdAdd } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import SideNav from '../SideNav/SideNav'
 
 
 
 function Home() {
-    const {logout } = useAuth()
+    function showSideBar(){
+        document.getElementById("blurBg").classList.remove('hideSideBar')
+    }
     return (
         <div className="homeBg">
             <div className="miniMenu">
-                <RiMenu2Fill/>
+                <RiMenu2Fill onClick={()=>showSideBar()}/>
             </div>
             
             <div className="homeContainer">
@@ -32,7 +34,8 @@ function Home() {
 
             
             {/* <pre>{JSON.stringify(currentUser, null, 2)}</pre> */}
-            <button onClick={(e)=>logout()}> Logout</button>
+            
+            <SideNav/>
 
         </div>
     )

@@ -9,6 +9,8 @@ import {createUserWithEmailAndPassword ,
     sendPasswordResetEmail} from 'firebase/auth'
 
 const AuthContext = createContext({
+    toggleSide: false,
+    setToggleSide : ()=>{},
     currentUser : null,
     register: ()=> Promise,
     login: ()=>Promise,
@@ -21,6 +23,7 @@ export const useAuth = ()=> useContext(AuthContext)
 
 export default function AuthContextProvider({children}){
     const [currentUser,setCurrentUser] = useState(null)
+    const [toggleSide,setToggleSide] = useState(false)
 
     useEffect(() => {
         const unsubscribe  = onAuthStateChanged(auth, user=>{
@@ -53,6 +56,8 @@ export default function AuthContextProvider({children}){
     }
 
     const value = {
+        toggleSide,
+        setToggleSide,
         currentUser,
         register,
         login,
