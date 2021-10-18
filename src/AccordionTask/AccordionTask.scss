@@ -26,7 +26,7 @@
     align-items: center;
     max-height: 50px;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .rotateUp{
@@ -37,8 +37,8 @@
 
 .show{
     padding-bottom: 20px;
-    max-height: 99999px;
-    transition: all 0.5s ease-in-out;
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .iconTask{

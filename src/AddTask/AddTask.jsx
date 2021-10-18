@@ -26,7 +26,7 @@ function AddTask() {
                     <h2>Add Task "{params.get('cat')}"</h2>
                     <div className="iconInput">
                         <label>Input Your Task Icon</label>
-                        <input maxLength="1" placeholder="use ⌃ + ⌘ + space or win + ." name="" id="" />
+                        <input  placeholder="use ⌃ + ⌘ + space or win + ." name="" id="" />
                     </div>
                     <div className="taskTitleInput">
                         <label>Input Your Task Title</label>
