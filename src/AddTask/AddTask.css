@@ -43,6 +43,10 @@
           align-items: center;
 }
 
+.taskContainer form {
+  width: 80%;
+}
+
 .taskContainer input {
   margin-top: 10px;
   margin-bottom: 10px;

@@ -6,6 +6,7 @@ import Search from '../Search/Search'
 import {MdAdd} from 'react-icons/md'
 import './HomeContent.css'
 import TaskCard from '../TaskCard/TaskCard'
+import { Link } from 'react-router-dom'
 
 function HomeContent() {
 
@@ -36,9 +37,11 @@ function HomeContent() {
                 <CategoryCard title="Morning Meeting" icon="🌤" isActive="true"/>
                 <CategoryCard title="Workout Routine" icon="💪" isActive="false"/>
                 <CategoryCard title="Birthday Party!" icon="🎉" isActive="false" />
-                <div className="addCategoryContainer">
-                    <MdAdd/>
-                </div>
+                <Link to="/addCategory">
+                    <div className="addCategoryContainer">
+                        <MdAdd/>
+                    </div>
+                </Link>
             </div>
 
             <div className="divider2">

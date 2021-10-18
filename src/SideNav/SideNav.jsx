@@ -14,10 +14,10 @@ function SideNav() {
     }
 
     return (
-        <div className="blurBg " id="blurBg">
+        <div className="blurBg hideSideBar" id="blurBg">
             <div className="sideNavWrapper">
                 <div className="logoSideBar">
-                    <RiCloseFill onClick={()=>toggleSideBar()} size="20px"/>
+                    <RiCloseFill onClick={()=>toggleSideBar()} size="24px"/>
                     <p><b>task.ly</b></p>
                 </div>
                 <div className="userDetail">

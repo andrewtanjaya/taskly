@@ -6,6 +6,7 @@ import clock from '../Assets/clock.png'
 import google from '../Assets/google-logo.png'
 import logo from '../Assets/taskly-logo.png'
 import './Register.css'
+import database from '../utils/database'
 
 function Register() {
     const [email, setEmail] = useState("")
@@ -61,6 +62,7 @@ function Register() {
                             displayName : name
                         }).then(() => {
                             console.log("updated")
+                            database.register(auth.currentUser.uid)
                           }).catch((error) => {
                             // An error occurred
                             // ...

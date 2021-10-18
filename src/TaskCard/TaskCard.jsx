@@ -2,6 +2,7 @@ import React from 'react'
 import './TaskCard.css'
 import {TiDelete} from 'react-icons/ti'
 import {MdModeEditOutline} from 'react-icons/md'
+import { IoIosCheckmarkCircle } from 'react-icons/io'
 
 function TaskCard(props) {
     return (
@@ -15,9 +16,7 @@ function TaskCard(props) {
                 <p>{props.time}</p>
             </div>
             <div className="actionButton">
-                <div className="editIcon">
-                    <MdModeEditOutline color="#FFFFFF" size="12px"/>
-                </div>
+                <IoIosCheckmarkCircle color="#6CBF74" size="26px"/>
                 <TiDelete color="#FF5858" size="30px"/>
             </div>
         </div>
