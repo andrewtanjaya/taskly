@@ -37,9 +37,61 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.floatingButtonContainer{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.addTaskFloatingButton{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #071EF1;
+    box-shadow: 0 8px 25px -5px #72727227;
+}
+
+.tooltiptext {
+    font-size: 12px;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    right: -18px;
+    margin-left: -60px;
+    animation: tooltipAnimation 4s infinite;
+    opacity: 0.5;
+  }
+
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
 
 @media only screen and (max-width: 760px) {
     .homeContainer{
         width: 80%;
     }
 }
+
+@keyframes tooltipAnimation {
+    0% {bottom: 140%;}
+    50%  {bottom: 120%;}
+    100% {bottom: 140%;}
+  }
