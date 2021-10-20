@@ -23,18 +23,31 @@
 
 .iconCategory{
     font-size: 40px;
+    box-sizing: border-box;
+    width: 60px;
     margin: 0;
-    padding: 0px 0px ;
+    padding: 10px 10px ;
     height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .categoryDetail{
     display: flex;
     flex-direction: column;
+    width: 100px;
+    max-height: 80px;
+    justify-content: center;
+
     font-size: 14px;
     p  {
         margin: 0;

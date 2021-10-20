@@ -69,7 +69,7 @@
             color: #a3a3a3af;
         }
     }
-    .incoming{
+    .upcoming{
         border: 1px solid #a3a3a358;
         padding: 8px 20px;
         background-color: white;
@@ -90,6 +90,7 @@
     .statusAction{
         display: flex;
         flex-direction: row;
+        cursor: pointer;
     }
 }
 
@@ -98,7 +99,7 @@
 .categoryList{
     display: flex;
     flex-direction: row;
-    overflow-x : scroll;
+    overflow-x : auto;
     padding:30px 14px;
     align-items: center;
 }
@@ -123,7 +124,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -161,4 +162,12 @@
     .header{
         margin-top: 40px
     }
+}
+
+.textNon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
 }

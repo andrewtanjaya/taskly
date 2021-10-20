@@ -1,10 +1,10 @@
-import { getDocs,setDoc,arrayUnion, updateDoc, doc ,collection, query, where} from "firebase/firestore"; 
+import { getDocs,getDoc,setDoc,arrayUnion, updateDoc, doc ,collection, query, where} from "firebase/firestore"; 
 import firestore from './init-firebase.js'
 
 class Database {
-    // getAllData() {
-    //   return db;
-    // }
+    async getAllData( userid) {
+      return (await getDoc(doc(firestore,"users", userid))).data();
+    }
 
     async register(userId){
         await setDoc(doc(firestore, "users",userId), {
@@ -13,19 +13,12 @@ class Database {
           });
     }
   
-    async createCategory(category, userId) {
-        await updateDoc(doc(firestore, "users", userId), {
-            category: arrayUnion(category)
-        });
+    async createCategory(data, userId) {
+        await setDoc(doc(firestore, "users",userId), data);
     }
 
-    async addTask(task,category, userId) {
-        const q = query(collection(firestore,"users"), where('category.name', '==', category))
-        const querysnap = await getDocs(q)
-        querysnap.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-          });
+    async addTask(data, userId) {
+        await setDoc(doc(firestore, "users",userId), data);
     }
 
     createTask(category, userId, newTask){

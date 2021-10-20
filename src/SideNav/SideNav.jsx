@@ -5,7 +5,7 @@ import logo from '../Assets/taskly-logo.png'
 import { useAuth } from '../Context/AuthContext'
 
 
-function SideNav() {
+function SideNav(props) {
     const {logout } = useAuth()
     const {currentUser } = useAuth()
     
@@ -28,19 +28,16 @@ function SideNav() {
                     }
                     <div className="userStatus">
                         <p><b>{currentUser.displayName}</b></p>
-                        <p>Exp : 37 / 100</p>
+                        <p>Exp : {props.exp}</p>
                     </div>
                 </div>
 
                 <div className="menuWrapper">
                     <div className="menu1">
-                        <pre>Completed Task     7</pre>
+                        <pre>Completed Task     {props.exp/10}</pre>
                     </div>
                     <div className="menu1">
-                        <pre>Failed Task                7</pre>
-                    </div>
-                    <div className="menu1">
-                        <pre>Current Rank            7</pre>
+                        <pre>Current Rank            {Math.floor(props.exp/100)}</pre>
                     </div>
                 </div>
 

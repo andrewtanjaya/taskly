@@ -16,8 +16,8 @@ function TaskCard(props) {
                 <p>{props.time}</p>
             </div>
             <div className="actionButton">
-                <IoIosCheckmarkCircle color="#6CBF74" size="26px"/>
-                <TiDelete color="#FF5858" size="30px"/>
+                <IoIosCheckmarkCircle color="#6CBF74" size="26px" onClick={(e)=>props.deleteTask(e,props.activeCat,props.title, true)} />
+                <TiDelete color="#FF5858" size="30px" onClick={(e)=>props.deleteTask(e,props.activeCat,props.title, false)}/>
             </div>
         </div>
     )

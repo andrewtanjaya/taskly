@@ -112,14 +112,14 @@
   color: #a3a3a3af;
 }
 
-.divider2 .incoming {
+.divider2 .upcoming {
   border: 1px solid #a3a3a358;
   padding: 8px 20px;
   background-color: white;
   border-radius: 40px;
 }
 
-.divider2 .incoming p {
+.divider2 .upcoming p {
   margin: 0px;
   font-weight: 400;
   color: #a3a3a3af;
@@ -142,6 +142,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  cursor: pointer;
 }
 
 .categoryList {
@@ -152,7 +153,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 30px 14px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -194,9 +195,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -244,5 +245,19 @@
   .header {
     margin-top: 40px;
   }
+}
+
+.textNon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
 }
 /*# sourceMappingURL=HomeContent.css.map */
