@@ -50,6 +50,8 @@ function AddTask() {
         })
         // console.log(data)
         database.addTask(data,currentUser.uid)
+        alert("New Task Added!")
+        history.push('/')
     }
 
     return (
@@ -60,11 +62,11 @@ function AddTask() {
                     <h2>Add Task "{params.get('cat')}"</h2>
                     <div className="iconInput">
                         <label>Input Your Task Icon</label>
-                        <input  placeholder="use ⌃ + ⌘ + space or win + ." name="" id="" onChange={(e)=>setIcon(e.target.value)} />
+                        <input required placeholder="use ⌃ + ⌘ + space or win + ." name="" id="" onChange={(e)=>setIcon(e.target.value)} />
                     </div>
                     <div className="taskTitleInput">
                         <label>Input Your Task Title</label>
-                        <input maxLength="15" placeholder="Must be less than 16 characters" type="text" name="" id="" onChange={(e)=>setTitle(e.target.value)} />
+                        <input required maxLength="15" placeholder="Must be less than 16 characters" type="text" name="" id="" onChange={(e)=>setTitle(e.target.value)} />
                     </div>
                     <div className="taskDateInput">
                         <label>Input Your Task Due Date</label>
