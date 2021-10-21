@@ -37,7 +37,7 @@ function HomeContent(props) {
                     var todayTask = []
                     var upcomingTask = []
                     for (var j = 0; j < data.category[i].task.length;j++){
-                        if(data.category[i].task[j].from.toDate().setHours(0,0,0,0) === (new Date()).setHours(0,0,0,0) || data.category[i].task[j].to.toDate().setHours(0,0,0,0) === (new Date()).setHours(0,0,0,0)){
+                        if(data.category[i].task[j].from.toDate().setHours(0,0,0,0) <= (new Date()).setHours(0,0,0,0) || data.category[i].task[j].to.toDate().setHours(0,0,0,0) >= (new Date()).setHours(0,0,0,0)){
                             todayTask.push({
                                 icon: data.category[i].task[j].icon,
                                 title: data.category[i].task[j].title,
@@ -210,7 +210,7 @@ function HomeContent(props) {
 
             <div className="taskCardList">
                 {
-                    filteredTask && filteredTask[0]?.task && filteredTask[0]?.task[0]?.length>0 ? filteredTask[0].task.map((item,i)=>  <TaskCard key={i} activeCat={props.activeCat} deleteTask={deleteTask} icon={item.icon} title={item.title} date={item.from.toDate().toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })+ ""} time={(item.from.toDate().getHours() < 10 ? '0' +item.from.toDate().getHours() : item.from.toDate().getHours())+ ":" +(item.from.toDate().getMinutes() < 10 ? '0' +item.from.toDate().getMinutes() : item.from.toDate().getMinutes()) + " - " + (item.to.toDate().getHours() < 10 ? '0' +item.to.toDate().getHours() : item.to.toDate().getHours())+ ":" +(item.to.toDate().getMinutes() < 10 ? '0' +item.to.toDate().getMinutes() : item.to.toDate().getMinutes())} />)
+                    filteredTask && filteredTask[0]?.task  ? filteredTask[0].task.map((item,i)=>  <TaskCard key={i} activeCat={props.activeCat} deleteTask={deleteTask} icon={item.icon} title={item.title} date={item.from.toDate().toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })+ ""} time={(item.from.toDate().getHours() < 10 ? '0' +item.from.toDate().getHours() : item.from.toDate().getHours())+ ":" +(item.from.toDate().getMinutes() < 10 ? '0' +item.from.toDate().getMinutes() : item.from.toDate().getMinutes()) + " - " + (item.to.toDate().getHours() < 10 ? '0' +item.to.toDate().getHours() : item.to.toDate().getHours())+ ":" +(item.to.toDate().getMinutes() < 10 ? '0' +item.to.toDate().getMinutes() : item.to.toDate().getMinutes())} />)
                     : <div className="textNon">No task please add it first 🙄</div> 
                 }
             </div>
